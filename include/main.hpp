@@ -1,16 +1,13 @@
 #include <iostream>
+#include <stdint.h>
 #include <math.h>
+#include <assert.h>
 #include <string>
 
-int solveProblem(int);
-
-// not all solutions utilize input number
-// many are coded specifically for the problem
-int main(int argc, const char** argv) {
-    int input;
+template<typename N>
+void doMain(N (*solve)(N)) {
+    N input;
     std::cin >> input;
-    int output = solveProblem(input);
+    N output = solve(input);
     std::cout << output << std::endl;
-    return 0;
-                        
 }

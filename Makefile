@@ -4,13 +4,13 @@ SRC_FILES=$(wildcard src/*.cpp)
 HEADERS=$(wildcard include/*.hpp)
 BIN_FILES=$(patsubst src/%.cpp,bin/%,$(SRC_FILES))
 
-.PHONY: all clean 
+.PHONY: all clean
 
 all: $(BIN_FILES)
 
 bin/%: src/%.cpp $(HEADERS)
-	    @mkdir -p bin
-		    g++ $(CXXFLAGS) -o $@ $<
+	@mkdir -p bin
+	g++ $(CXXFLAGS) -o $@ $<
 
 clean:
-	    rm bin/*
+	rm bin/*
