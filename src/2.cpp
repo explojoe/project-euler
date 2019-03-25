@@ -1,6 +1,6 @@
 #include "main.hpp"
 
-int solve_problem(int number){
+int solveProblem(int number){
     int sum;
     int current = 1;
     int last = 0;

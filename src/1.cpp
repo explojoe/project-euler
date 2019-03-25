@@ -1,6 +1,6 @@
 #include "main.hpp"
 
-int solve_problem(int number){
+int solveProblem(int number){
     int sum;
     for(int i = 0; i < number; i++){
         if((i%3 == 0) || (i%5 ==0))
