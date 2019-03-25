@@ -4,9 +4,9 @@
 #include <stdint.h>
 #include <string>
 
-template <typename N> void doMain(N (*solve)(N)) {
-  N input;
-  std::cin >> input;
-  N output = solve(input);
-  std::cout << output << std::endl;
+template <typename NI, typename NO = NI> void doMain(NO (*solve)(NI)) {
+    NI input;
+    std::cin >> input;
+    NO output = solve(input);
+    std::cout << output << std::endl;
 }

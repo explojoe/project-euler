@@ -10,23 +10,30 @@
 // between the sum of the squares of the first one hundred natural numbers and
 // the square of the sum.
 
-int sumSquaresUpTo(int);
-int squareOfSumTo(int);
+uint64_t sumSquaresUpTo(uint32_t);
+uint64_t squareOfSumTo(uint32_t);
 
-int solveProblem(int num) { return sumSquaresUpTo(num) - squareOfSumTo(num); }
-
-int sumSquaresUpTo(int num) {
-  int sum = 0;
-  for (int i = 1; i <= num; i++) {
-    sum += i * i;
-  }
-  return sum;
+uint64_t solveProblem(uint32_t num) {
+    return sumSquaresUpTo(num) - squareOfSumTo(num);
 }
 
-int squareOfSumTo(int num) {
-  int square = 0;
-  for (int i = 1; i <= num; i++) {
-    square += i;
-  }
-  return square * square;
+uint64_t sumSquaresUpTo(uint32_t num) {
+    uint64_t sum = 0;
+    for (uint64_t i = 1; i <= num; i++) {
+        sum += i * i;
+    }
+    return sum;
+}
+
+uint64_t squareOfSumTo(uint32_t num) {
+    uint64_t square = 0;
+    for (uint64_t i = 1; i <= num; i++) {
+        square += i;
+    }
+    return square * square;
+}
+
+int main(int argc, char **argv) {
+    doMain<uint32_t, uint64_t>(solveProblem);
+    return 0;
 }
