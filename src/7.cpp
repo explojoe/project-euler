@@ -1,6 +1,7 @@
 #include "main.hpp"
 
 // 10001st prime
+
 // Find the 10001st prime number
 
 bool isPrime(uint32_t num) {

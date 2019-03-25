@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdint.h>
 #include <string>
+#include <vector>
 
 template <typename NI = uint32_t, typename NO = NI>
 void doMain(NO (*solve)(NI)) {
