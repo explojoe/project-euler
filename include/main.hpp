@@ -4,7 +4,8 @@
 #include <stdint.h>
 #include <string>
 
-template <typename NI, typename NO = NI> void doMain(NO (*solve)(NI)) {
+template <typename NI = uint32_t, typename NO = NI>
+void doMain(NO (*solve)(NI)) {
     NI input;
     std::cin >> input;
     NO output = solve(input);

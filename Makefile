@@ -1,4 +1,4 @@
-CXXFLAGS=-O3 -Wall -Iinclude
+CXXFLAGS=-O3 -Wall -Iinclude -march=native 
 SRC_FILES=$(wildcard src/*.cpp)
 HEADERS=$(wildcard include/*.hpp)
 BIN_FILES=$(patsubst src/%.cpp,bin/%,$(SRC_FILES))

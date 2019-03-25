@@ -14,7 +14,7 @@ uint64_t sumSquaresUpTo(uint32_t);
 uint64_t squareOfSumTo(uint32_t);
 
 uint64_t solveProblem(uint32_t num) {
-    return sumSquaresUpTo(num) - squareOfSumTo(num);
+    return squareOfSumTo(num) - sumSquaresUpTo(num);
 }
 
 uint64_t sumSquaresUpTo(uint32_t num) {

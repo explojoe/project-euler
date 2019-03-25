@@ -45,6 +45,6 @@ uint32_t solveProblem(uint32_t num) {
 }
 
 int main(int argc, char **argv) {
-    doMain<uint32_t>(solveProblem);
+    doMain(solveProblem);
     return 0;
 }
