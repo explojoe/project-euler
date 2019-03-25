@@ -1,7 +1,6 @@
 #include <iostream>
 #include <math.h>
 #include <string>
-#include <bits/stdc++.h> 
 
 int solveProblem(int);
 

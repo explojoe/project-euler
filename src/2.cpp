@@ -1,7 +1,7 @@
 #include "main.hpp"
 
 int solveProblem(int number){
-    int sum;
+    int sum = 0;
     int current = 1;
     int last = 0;
     while((current + last) < number){
