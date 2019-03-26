@@ -24,6 +24,7 @@ void printSeive(std::vector<bool> seive, uint32_t num) {
 
 uint64_t solveProblem(uint32_t num) {
     uint64_t sumPrimes = 2;
+    uint32_t primes = 0;
 
     std::vector<bool> seive(num); // I am using the seive of Eratosthenes
 
@@ -50,6 +51,7 @@ uint64_t solveProblem(uint32_t num) {
 
         if (!seive[i - 1]) {
             sumPrimes += i;
+            primes++;
             for (uint32_t a = i; a < num; a += i) {
                 seive[a - 1] = true;
             }
@@ -61,9 +63,11 @@ uint64_t solveProblem(uint32_t num) {
     for (uint32_t i = rootNum; i <= num; i += 2) {
         if (!seive[i - 1]) {
             sumPrimes += i;
+            primes++;
         }
     }
 
+    std::cout << std::to_string(primes) + "\n";
     return sumPrimes;
 }
 

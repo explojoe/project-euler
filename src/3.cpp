@@ -3,7 +3,7 @@
 bool isPrime(uint64_t);
 
 uint64_t solveProblem(uint64_t num) {
-    uint64_t target = 600851475143ll;
+    uint64_t target = num;
     uint64_t largestFactor = 0;
 
     // a prime factor of a number will never exceed sqrt(n)
